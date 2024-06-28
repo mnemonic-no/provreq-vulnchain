@@ -16,7 +16,7 @@ $ cd ~
 $ mkdir src; cd src
 $ git clone https://github.com/mnemonic-no/provreq-vulnchain
 $ cd provreq-vulnchain
-$ sudo python3 -m pip install -e .
+$ sudo python3 -m pip install .
 $ provreq-build-cve-agent-promises --datadir ~/cvedata/
 ```
 This creates the agent_promises.json and promise_descriptions.csv needed for use with provreq.
