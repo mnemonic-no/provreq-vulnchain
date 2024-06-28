@@ -1,0 +1,533 @@
+{
+   "AV": {
+      "name": "Attack Vector",
+      "map": {
+         "N": {
+            "name": "Network",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "A": {
+            "name": "Adjacent",
+            "requires": ["access_adjacent"],
+            "provides": [],
+			"index": 1
+
+         },
+         "L": {
+            "name": "Local",
+            "requires": ["access_local"],
+            "provides": [],
+			"index": 2
+         },
+         "P": {
+            "name": "Physical",
+            "requires": ["access_physical"],
+            "provides": [],
+			"index": 3
+         }
+      }
+   },
+   "AC": {
+      "name": "Attack Complexity",
+      "map": {
+         "L": {
+            "name": "Low",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         }
+      }
+   },
+   "PR": {
+      "name": "Privileges Required",
+      "map": {
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "L": {
+            "name": "Low",
+            "requires": ["privileges_low"],
+            "provides": [],
+			"index": 1
+         },
+         "H": {
+            "name": "High",
+            "requires": ["privileges_high", "privileges_low"],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "UI": {
+      "name": "User Interaction",
+      "map": {
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "R": {
+            "name": "Required",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         }
+      }
+   },
+   "S": {
+      "name": "Scope",
+      "map": {
+         "U": {
+            "name": "Unchanged",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "C": {
+            "name": "Changed",
+            "requires": [],
+            "provides": ["access_adjacent"],
+			"index": 0
+         }
+      }
+   },
+   "C": {
+      "name": "Condidentiality",
+      "map": {
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": ["access_local", "privileges_high", "privileges_low"],
+			"index": 0
+         },
+         "L": {
+            "name": "Low",
+            "requires": [],
+            "provides": ["access_local", "privileges_low"],
+			"index": 1
+         },
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "I": {
+      "name": "Integrity",
+      "map": {
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "L": {
+            "name": "Low",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "A": {
+      "name": "Availability",
+      "map": {
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "L": {
+            "name": "Low",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "E": {
+      "name": "Exploit Code Maturity",
+      "map": {
+         "X": {
+            "name": "Not Defined",
+            "requires": [],
+            "provides": [],
+			"index": 10
+         },
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "F": {
+            "name": "Functional",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "P": {
+            "name": "Proof-of-Concept",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         },
+         "U": {
+            "name": "Unproved",
+            "requires": [],
+            "provides": [],
+			"index": 3
+         }
+      }
+   },
+   "RL": {
+      "name": "Remediation Level",
+      "map": {
+         "X": {
+            "name": "Not Defined",
+            "requires": [],
+            "provides": [],
+			"index": 10
+         },
+         "U": {
+            "name": "Unavailable",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "W": {
+            "name": "Workaround",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "T": {
+            "name": "Temporary Fix",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         },
+         "O": {
+            "name": "Official Fix",
+            "requires": [],
+            "provides": [],
+			"index": 3
+         }
+      }
+   },
+   "RC": {
+      "name": "Report Confidence",
+      "map": {
+         "X": {
+            "name": "Not Defined",
+            "requires": [],
+            "provides": [],
+			"index": 10
+         },
+         "C": {
+            "name": "Confirmed",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "R": {
+            "name": "Reasonable",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "U": {
+            "name": "Unknown",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "CR": {
+      "name": "Confidentiality Requirement",
+      "map": {
+         "X": {
+            "name": "Not Defined",
+            "requires": [],
+            "provides": [],
+			"index": 10
+         },
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "M": {
+            "name": "Medium",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "L": {
+            "name": "Log",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "IR": {
+      "name": "Integrity Requirement",
+      "map": {
+         "X": {
+            "name": "Not Defined",
+            "requires": [],
+            "provides": [],
+			"index": 10
+         },
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "M": {
+            "name": "Medium",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "L": {
+            "name": "Log",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "AR": {
+      "name": "Availability Requirement",
+      "map": {
+         "X": {
+            "name": "Not Defined",
+            "requires": [],
+            "provides": [],
+			"index": 10
+         },
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "M": {
+            "name": "Medium",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "L": {
+            "name": "Log",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "MAV": {
+      "name": "Modified Attack Vector",
+      "map": {
+         "N": {
+            "name": "Network",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "A": {
+            "name": "Adjacent",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "L": {
+            "name": "Local",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         },
+         "P": {
+            "name": "Physical",
+            "requires": [],
+            "provides": [],
+			"index": 3
+         }
+      }
+   },
+   "MAC": {
+      "name": "Modified Attack Complexity",
+      "map": {
+         "L": {
+            "name": "Low",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         }
+      }
+   },
+   "MPR": {
+      "name": "Modified Privileges Required",
+      "map": {
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "L": {
+            "name": "Low",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "MUI": {
+      "name": "Modified User Interaction",
+      "map": {
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "R": {
+            "name": "Required",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         }
+      }
+   },
+   "MS": {
+      "name": "Modified Scope",
+      "map": {
+         "U": {
+            "name": "Unchanged",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "C": {
+            "name": "Changed",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         }
+      }
+   },
+   "MC": {
+      "name": "Modified Condidentiality",
+      "map": {
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "L": {
+            "name": "Low",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "MI": {
+      "name": "Modified Integrity",
+      "map": {
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "L": {
+            "name": "Low",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   },
+   "MA": {
+      "name": "Modified Availability",
+      "map": {
+         "H": {
+            "name": "High",
+            "requires": [],
+            "provides": [],
+			"index": 0
+         },
+         "L": {
+            "name": "Low",
+            "requires": [],
+            "provides": [],
+			"index": 1
+         },
+         "N": {
+            "name": "None",
+            "requires": [],
+            "provides": [],
+			"index": 2
+         }
+      }
+   }
+}
